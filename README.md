@@ -53,4 +53,4 @@ Imessage hoạt động OK
   3. Nếu sleep gặp vấn đề, hãy tham khảo [tại đây](https://github.com/ismethr/9020mHack)
 
 # LINK DOWNLOAD:
- **[Bấm vô đây bạn ơi](https://github.com/HowNeft/HowNeft/releases/tag/Release)**
+ **[Bấm vô đây bạn ơi](https://github.com/HowNeft/Optiplex9020M/releases/tag/Release)**
