@@ -46,15 +46,15 @@ This is the Hackintosh EFI Folder for Dell OptiPlex 9020M. The configuration set
 First, download [modGRUBShell.efi](https://github.com/datasone/grub-mod-setup_var/releases) then put it in EFI/OC/Tools folder, next Open config.plist and add it to Misc -> Tools. When you are in the boot Menu of Opencore, select modGRUBShell.efi then enter the values below
 
 * Disable CFG Lock: 
-  * ***setup_var 0xD9F 0x0***
+  * **setup_var 0xD9F 0x0**
 * Set DVMT pre-alloc to 64MB: 
-  * ***setup_var 0x263 0x2***
+  * **setup_var 0x263 0x2**
 * Enable EHCI hand-off:
-  * ***setup_var 0x2 0x1***
-  * ***setup_var 0x144 0x1***
-  * ***setup_var 0x15A 0x2***
-  * ***setup_var 0x146 0x0***
-  * ***setup_var 0x147 0x0***
+  * **setup_var 0x2 0x1**
+  * **setup_var 0x144 0x1**
+  * **setup_var 0x15A 0x2**
+  * **setup_var 0x146 0x0**
+  * **setup_var 0x147 0x0**
 
 When done, reboot.
 
