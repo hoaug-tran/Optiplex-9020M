@@ -1,3 +1,8 @@
+# Hackintosh-OptiPlex-9020M
+**Works on MacOS Big Sur and Catalina.**
+
+This is the Hackintosh EFI Folder for Dell OptiPlex 9020M. The configuration settings support MacOS Catalina 10.15.7 and Big Sur 11.6.3 with resolution up to 1920x1080. HiPDI support can be actived with [One Key HiDPI](https://github.com/xzhih/one-key-hidpi/blob/master/README.md) script. You will have to **generate a new serial and SmUUID** before login to your iCloud account and if you install Big Sur, you also need [Map USB](https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html) so that you won't have any problems with the usb ports when installing .
+
 ## Specs
 
 * **Name:** [Dell OptiPlex 9020M](https://www.hardware-corner.net/desktop-models/Dell-OptiPlex-9020M/) with 1 port DP and 1 port VGA
@@ -15,7 +20,42 @@
 * Monitor output at 1920x1080
 * Integrated Audio Output/Input
 * All USB Ports
-LAN & Wire
-Handoff
-SideCar
-DRM for stuff like Netflix and Amazon Prime [require a dGPU](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md).
+* LAN & Wireless Network
+* Sleep & Wakeup
+
+## Not  Working
+
+* Airdrop & Airplay
+* Handoff
+* SideCar
+* DRM for stuff like Netflix and Amazon Prime [require a dGPU](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md).
+
+## BIOS Settings
+- General → Advanced Boot Options: ***uncheck***
+- General → Advance Boot options → Enable Legacy Operation ROMs: ***uncheck***
+- System Configuration → SATA Operation: ***AHCI***
+- Secure Boot → Secure Boot Enable: ***Disabled***
+- Virtualization Support → VT for Direct I/O: ***uncheck***
+- Virtualization Support → Virtualization: ***check***
+
+
+## BIOS Settings via modGRUBShell.efi
+
+First, download [modGRUBShell.efi](https://github.com/datasone/grub-mod-setup_var/releases) then put it in EFI/OC/Tools folder, next Open config.plist and add it to Misc -> Tools. When you are in the boot Menu of Opencore, select modGRUBShell.efi then enter the values below
+
+* Disable CFG Lock: 
+***setup_var 0xD9F 0x0***
+* Set DVMT pre-alloc to 64MB: 
+***setup_var 0x263 0x2***
+* Enable EHCI hand-off:
+***setup_var 0x2 0x1***
+***setup_var 0x144 0x1***
+***setup_var 0x15A 0x2***
+***setup_var 0x146 0x0***
+***setup_var 0x147 0x0***
+
+When done, reboot
+
+[EFI]()
+
+Good Luck
