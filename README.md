@@ -3,6 +3,8 @@
 
 This is the Hackintosh EFI Folder for Dell OptiPlex 9020M. The configuration settings support MacOS Catalina 10.15.7 and Big Sur 11.6.3 with resolution up to 1920x1080. HiPDI support can be actived with [One Key HiDPI](https://github.com/xzhih/one-key-hidpi/blob/master/README.md) script. You will have to **generate a new serial and SmUUID** before login to your iCloud account and if you install Big Sur, you also need [Map USB](https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html) so that you won't have any problems with the usb ports when installing .
 
+![Screen Shot 2022-01-31 at 20 03 52](https://user-images.githubusercontent.com/92006941/151798456-ec3db64d-177e-46da-ab0f-45345fe818bc.png)
+
 ## Specs
 
 * **Name:** [Dell OptiPlex 9020M](https://www.hardware-corner.net/desktop-models/Dell-OptiPlex-9020M/) with 1 port DP and 1 port VGA
@@ -56,6 +58,8 @@ First, download [modGRUBShell.efi](https://github.com/datasone/grub-mod-setup_va
 
 When done, reboot.
 
-[Download the EFI]()
+![Screen Shot 2022-01-31 at 20 06 19](https://user-images.githubusercontent.com/92006941/151798769-f04208b1-029d-4fc4-86cf-c7d8ac0aee93.png)
+
+[Download the EFI](https://github.com/HowNeft/Optiplex9020M/releases/tag/Release)
 
 **Good Luck**
