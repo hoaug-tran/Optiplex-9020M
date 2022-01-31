@@ -6,7 +6,7 @@ This is the Hackintosh EFI Folder for Dell OptiPlex 9020M. The configuration set
 ## Specs
 
 * **Name:** [Dell OptiPlex 9020M](https://www.hardware-corner.net/desktop-models/Dell-OptiPlex-9020M/) with 1 port DP and 1 port VGA
-* **[CPU](https://ark.intel.com/content/www/vn/vi/ark/products/78928/intel-core-i5-4590t-processor-6m-cache-up-to-3-00-ghz.html):** Intel® Core™ i5-4590T
+* **CPU:** [Intel® Core™ i5-4590T](https://ark.intel.com/content/www/vn/vi/ark/products/78928/intel-core-i5-4590t-processor-6m-cache-up-to-3-00-ghz.html)
 * **iGPU:** Intel® HD Graphics 4600
 * **RAM:** 8GB DDR3 1600MHz
 * **SSD:** NT-256-TI
