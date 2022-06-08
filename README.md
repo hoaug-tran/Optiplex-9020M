@@ -51,8 +51,7 @@ First, download [modGRUBShell.efi](https://github.com/datasone/grub-mod-setup_va
 * Set DVMT pre-alloc to 64MB: 
   * setup_var 0x263 0x2
 
-* Enable EHCI hand-off
-Now that I have used SSDT-EHCx_OFF.aml, you may not need to disable EHCx port this way, if using SSDT-EHCx_OFF but EHCx port is still Enable then you can do this.
+* Enable EHCI hand-off (**_Now that I have used SSDT-EHCx_OFF.aml, you may not need to disable EHCx port this way, if using SSDT-EHCx_OFF but EHCx port is still Enable then you can do this._**)
 
   * setup_var 0x2 0x1
   * setup_var 0x144 0x1
