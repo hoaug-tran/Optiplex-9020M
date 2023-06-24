@@ -35,36 +35,44 @@ Also, if you install Catalina you should use SMBIOS iMac14.3. If you install Big
 * DRM for stuff like Netflix and Amazon Prime [require a dGPU](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md).
 
 ## **BIOS Settings**
-- General → Advanced Boot Options: ***Disabled***
-- General → Advance Boot options → Enable Legacy Operation ROMs: ***Disabled***
-- System Configuration → SATA Operation: ***AHCI***
-- Secure Boot → Secure Boot Enable: ***Disabled***
-- Virtualization Support → VT for Direct I/O: ***Disabled***
-- Virtualization Support → Virtualization: ***Enabled***
+First, click Load Defaults to set bios to default. then set as below:
 
+- General → Boot Sequence → Boot List Option: **UEFI**
+- General → Advance Boot options → Enable Legacy Operation ROMs: **Disabled**
+- General → UEFI Boot Path Security: **Never**
+- System Configuration → Integrated NIC: **Enabled**
+- System Configuration → SATA Operation: **AHCI**
+- Security → TPM Security: **Uncheck TPM Security**
+- Secure Boot → Secure Boot Enable: **Disabled**
+- Power Management → Enable USB Wake Support From Standby: **Uncheck**
+- Power Management → Deep Sleep Control: **Disabled**
+- Power Management → Wake on LAN/WLAN: **Disabled**
+- Virtualization Support → VT for Direct I/O: **Disabled**
+- Virtualization Support → Virtualization: **Enabled**
 
 ## **BIOS Settings via modGRUBShell.efi**
 
-First, download [modGRUBShell.efi](https://github.com/datasone/grub-mod-setup_var/releases) then put it in EFI/OC/Tools folder, next Open config.plist and add it to Misc -> Tools. When you are in the boot Menu of Opencore, select modGRUBShell.efi then enter the values below.
+First, download [modGRUBShell.efi](https://github.com/datasone/grub-mod-setup_var/releases) then put it in EFI/OC/Tools folder, next Open config.plist and add it to Misc → Tools. When you are in the boot Menu of Opencore, select modGRUBShell.efi then enter the values below.
 
  **WARNING!: Be careful with entering these values as it may cause you to fail the bios and have to remove the CMOS battery to reset the bios.**
 
----
+
 **Disable CFG Lock:** 
   * setup_var 0xD9F 0x0
----
+
 **Set DVMT pre-alloc to 64MB:** 
   * setup_var 0x263 0x2
----
+
 **Enable EHCI hand-off** (Can be replaced with SSDT-EHCx_OFF.aml)**:**
   * setup_var 0x2 0x1
   * setup_var 0x144 0x1
   * setup_var 0x15A 0x2
   * setup_var 0x146 0x0
   * setup_var 0x147 0x0
----
 
 **When done, reboot and enjoy.**
+
+---
 
 **Good Luck** 
 
