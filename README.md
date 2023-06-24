@@ -5,7 +5,7 @@ This is the Hackintosh EFI Folder for Dell OptiPlex 9020M (**_only Dell OptiPlex
 
 Also, if you install Catalina you should use SMBIOS iMac14.3. If you install Big Sur, you can use SMBIOS iMac14.4 or 15.1. If you install Monterey, you need to use SMBIOS iMac16.2. I recommend installing Catalina or Big Sur for the smoothest experience.
 
-![Screen Shot 2023-06-24 at 14 09 56](https://github.com/hoaug-tran/Optiplex-9020M/assets/92006941/7498e19c-438c-492c-b90f-7938f98f5f69)
+![Screen Shot 2023-06-24 at 14 16 20](https://github.com/hoaug-tran/Optiplex-9020M/assets/92006941/50b1c562-afe3-4f46-8069-534c9ad59c68)
 
 ## **Specs**
 
