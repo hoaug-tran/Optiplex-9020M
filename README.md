@@ -29,10 +29,8 @@ Also, if you install Catalina you should use SMBIOS iMac14.3. If you install Big
 
 ## **Not  Working**
 
-* Airdrop & Airplay ( *It can be fixed if you replace the Intel card with a native Broadcom Wifi card such as BCM94360NG* )
-* Handoff
-* SideCar
-* DRM for stuff like Netflix and Amazon Prime [require a dGPU](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md).
+* Airdrop & Airplay, Handoff, SideCar ( can be fixed if you replace the Intel card with a native Broadcom Wifi card such as BCM94360NG )
+* DRM for stuff like Netflix, Apple TV, Safari,.. and Amazon Prime [require a dGPU](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Chart.md).
 
 ## **BIOS Settings**
 First, click Load Defaults to set bios to default. then set as below:
