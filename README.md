@@ -1,9 +1,11 @@
 # **Hackintosh-OptiPlex-9020M**
-**Works on MacOS Big Sur and Catalina.**
+**Works on MacOS Catalina, Big Sur and Monterey**
 
-This is the Hackintosh EFI Folder for Dell OptiPlex 9020M (**_only Dell OptiPlex 9020M_**). The configuration settings support MacOS Catalina lastest and Big Sur lastest with resolution up to 1920x1080. HiPDI support can be actived with [One Key HiDPI](https://github.com/xzhih/one-key-hidpi/blob/master/README.md) script. You will have to [generate a new SMBIOS](https://github.com/corpnewt/GenSMBIOS) before login to your iCloud account and need [Map USB](https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html) so that you won't have any problems with the usb ports when installing .
+This is the Hackintosh EFI Folder for Dell OptiPlex 9020M (**_only Dell OptiPlex 9020M_**). The configuration settings support MacOS Catalina lastest, Big Sur lastest and Monterey lastest with resolution up to 1920x1080. HiPDI support can be actived with [One Key HiDPI](https://github.com/xzhih/one-key-hidpi/blob/master/README.md) script. You will have to [generate a new SMBIOS](https://github.com/corpnewt/GenSMBIOS) before login to your iCloud account and need [Map USB](https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html) so that you won't have any problems with the usb ports when installing.
 
-![Screen Shot 2022-11-04 at 18 38 10](https://user-images.githubusercontent.com/92006941/199963832-001353b6-c8fd-47f5-b3cc-c9660c9d99b3.png)
+Also, if you install Catalina you should use SMBIOS iMac14.3. If you install Big Sur, you can use SMBIOS iMac14.4 or 15.1. If you install Monterey, you need to use SMBIOS iMac16.2. I recommend installing Catalina or Big Sur for the smoothest experience.
+
+![Screen Shot 2023-06-24 at 14 09 56](https://github.com/hoaug-tran/Optiplex-9020M/assets/92006941/7498e19c-438c-492c-b90f-7938f98f5f69)
 
 ## **Specs**
 
@@ -45,17 +47,16 @@ This is the Hackintosh EFI Folder for Dell OptiPlex 9020M (**_only Dell OptiPlex
 
 First, download [modGRUBShell.efi](https://github.com/datasone/grub-mod-setup_var/releases) then put it in EFI/OC/Tools folder, next Open config.plist and add it to Misc -> Tools. When you are in the boot Menu of Opencore, select modGRUBShell.efi then enter the values below.
 
- **WARNING: Be careful with entering these values as it may cause you to fail the bios and have to remove the CMOS battery to reset the bios.**
+ **WARNING!: Be careful with entering these values as it may cause you to fail the bios and have to remove the CMOS battery to reset the bios.**
 
 ---
-
-* **Disable CFG Lock:** 
+**Disable CFG Lock:** 
   * setup_var 0xD9F 0x0
 ---
-* **Set DVMT pre-alloc to 64MB:** 
+**Set DVMT pre-alloc to 64MB:** 
   * setup_var 0x263 0x2
 ---
-* **Enable EHCI hand-off** (Can be replaced with SSDT-EHCx_OFF.aml)**:**
+**Enable EHCI hand-off** (Can be replaced with SSDT-EHCx_OFF.aml)**:**
   * setup_var 0x2 0x1
   * setup_var 0x144 0x1
   * setup_var 0x15A 0x2
@@ -65,9 +66,6 @@ First, download [modGRUBShell.efi](https://github.com/datasone/grub-mod-setup_va
 
 **When done, reboot and enjoy.**
 
-
-**[Download the EFI](https://github.com/HowNeft/Optiplex9020M/releases/tag/Release)**
-
 **Good Luck** 
 
-Update time: 12:40AM - Fri - 10/28/2022
+Update time: 2:22 PM - Sat - 24/06/2023
